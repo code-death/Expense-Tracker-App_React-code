@@ -11,7 +11,7 @@ const AddExpenseForm = props => {
     event.preventDefault()
     const expense = {
       name: name,
-      cost: cost,
+      cost: parseInt(cost),
       id: uuidv4(),
     }
 
