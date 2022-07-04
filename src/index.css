@@ -1,0 +1,8 @@
+header {
+  text-align: center;
+}
+@media screen and (max-width: 327px) {
+  .budget-button {
+    margin-top: 10px;
+  }
+} ;
