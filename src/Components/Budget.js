@@ -22,8 +22,8 @@ const Budget = () => {
   }
 
   return (
-    <div className='alert alert-secondary col-sm pb-2'>
-      <form onSubmit={submitHandler}>
+    <div className='alert alert-secondary text-center col-sm pb-2'>
+      <form className={edit ? 'd-flex' : ''} onSubmit={submitHandler}>
         {edit ? (
           <div>
             <label htmlFor='budget'>Budget: </label>
