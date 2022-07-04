@@ -2,11 +2,14 @@ import ExpenseItem from './ExpenseItem.js'
 import { AppContext } from '../Context/AppContext.js'
 import { useContext } from 'react'
 
-const ExpenseList = () => {
+const ExpenseList = props => {
   const { expenses } = useContext(AppContext)
+  const filteredExpenses = expenses.filter(expense => {
+    return expense.name.toLowerCase().includes(props.filter)
+  })
   return (
     <ul className='list-group'>
-      {expenses.map(expense => {
+      {filteredExpenses.map(expense => {
         return (
           <ExpenseItem
             key={expense.id}

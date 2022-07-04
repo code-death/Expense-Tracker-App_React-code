@@ -19,6 +19,8 @@ const AddExpenseForm = props => {
       type: 'ADD_EXPENSE',
       payload: expense,
     })
+    setName('')
+    setCost('')
   }
 
   return (
